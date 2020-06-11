@@ -1,0 +1,75 @@
+body::-webkit-scrollbar{
+   color:black;
+}
+
+
+#container{
+  background-color: slateblue;
+  width : 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 800px;
+}
+
+#simple-pseudoclasses{
+  display: flex;
+  flex-flow: row wrap;
+  min-height: 50px;
+  background-color: lemonchiffon;
+}
+
+#simple-pseudoclasses button{
+  background: burlywood;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin:5px;
+  border-radius : 8px;
+}
+
+#simple-pseudoclasses button:nth-of-type(3){
+ flex-grow: 3;
+}
+
+#simple-pseudoclasses button:hover{
+ background-color: slategray;
+}
+
+
+#simple-animation{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  min-height: 50px;
+  background-color: mintcream;
+}
+#simple-animation button{
+  background-color: skyblue;
+  flex-grow: 1;
+  transition: background-color 1000ms ease-in;  
+}
+
+#simple-animation button:hover{
+  background-color: violet;
+
+}
+
+#simple-animation button:first-child{
+  font-size: 2rem;
+  
+}
+
+/*also try odd or even*/
+#nth-child button:nth-child(3n-1){
+  font-size: 2rem;
+  
+}
+
+#nth-child button:not(:nth-child(3n-1)){
+  color : pink;
+  
+}
+
+#paragraph-example p::selection{
+  background: black;
+  color :aquamarine;
+}
